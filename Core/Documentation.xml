@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<documentation>
+	<members name="ExcerciseView">
+		<ExcerciseView>
+			<summary>
+				Модель, отвечающая за представление упражнения возвращаемого из источника хранения.
+			</summary>
+		</ExcerciseView>
+		<Id>
+			<value>
+				Id упражнения.
+			</value>
+		</Id>
+		<Title>
+			<value>
+				Полное название упражнения состоящее из последовательности подтем.
+			</value>
+		</Title>
+    <Question>
+      <value>
+        Вопрос.
+      </value>
+    </Question>
+    <Answrer>
+      <value>
+        Ответ на вопрос.
+      </value>
+    </Answrer>
+	</members>
+</documentation>

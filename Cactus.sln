@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cactus", "Cactus\Cactus.csproj", "{378F3378-1659-4A2F-994B-60FD70718B00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cactus", "Cactus\Cactus.csproj", "{378F3378-1659-4A2F-994B-60FD70718B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{95974710-38CC-4B9D-AF6B-97E88F02AE46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{B06D2EDA-6037-4287-B459-0F371861B1FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{378F3378-1659-4A2F-994B-60FD70718B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{378F3378-1659-4A2F-994B-60FD70718B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{378F3378-1659-4A2F-994B-60FD70718B00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95974710-38CC-4B9D-AF6B-97E88F02AE46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95974710-38CC-4B9D-AF6B-97E88F02AE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95974710-38CC-4B9D-AF6B-97E88F02AE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95974710-38CC-4B9D-AF6B-97E88F02AE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06D2EDA-6037-4287-B459-0F371861B1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06D2EDA-6037-4287-B459-0F371861B1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06D2EDA-6037-4287-B459-0F371861B1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06D2EDA-6037-4287-B459-0F371861B1FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
