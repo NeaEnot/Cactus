@@ -22,7 +22,7 @@ namespace FileImplement
 
         private Context(string path)
         {
-            this.path = path + ".json";
+            this.path = "storage\\" + path + ".json";
             CreateFileIfNeed();
         }
 
@@ -56,6 +56,12 @@ namespace FileImplement
 
         private void CreateFileIfNeed()
         {
+            DirectoryInfo dir = new DirectoryInfo("storage");
+            if (!dir.Exists)
+            {
+                dir.Create();
+            }
+
             FileInfo file = new FileInfo(path);
             if (!file.Exists)
             {

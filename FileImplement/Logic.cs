@@ -45,5 +45,14 @@ namespace FileImplement
                 })
                 .ToList();
         }
+
+        public void Delete(ExcerciseBinding model)
+        {
+            List<Excercise> list = context.Excercises;
+
+            list.RemoveAll(rec => model == null);
+
+            context.Excercises = list;
+        }
     }
 }

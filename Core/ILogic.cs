@@ -11,5 +11,8 @@ namespace Core
 
         /// <include file='Documentation.xml' path='documentation/members[@name="ILogic"]/Read/*'/>
         List<ExcerciseView> Read(ExcerciseBinding model);
+
+        /// <include file='Documentation.xml' path='documentation/members[@name="ILogic"]/Delete/*'/>
+        void Delete(ExcerciseBinding model);
     }
 }
