@@ -22,7 +22,7 @@ namespace Tests.CoreTest
         [Fact]
         public void TestCreate()
         {
-            ILogic logic = new Logic(DateTime.Now.ToString("test"));
+            ILogic logic = new Logic("test");
 
             try
             {
@@ -45,7 +45,7 @@ namespace Tests.CoreTest
         [Fact]
         public void TestReadById()
         {
-            ILogic logic = new Logic(DateTime.Now.ToString("test"));
+            ILogic logic = new Logic("test");
 
             try
             {
@@ -70,7 +70,7 @@ namespace Tests.CoreTest
         [Fact]
         public void TestDeleteAll()
         {
-            ILogic logic = new Logic(DateTime.Now.ToString("test"));
+            ILogic logic = new Logic("test");
 
             try
             {
@@ -89,9 +89,33 @@ namespace Tests.CoreTest
         }
 
         [Fact]
+        public void TestDeleteSingle()
+        {
+            ILogic logic = new Logic("test");
+
+            try
+            {
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestDeleteSingle_1", Question = "Test question 1", Answrer = "Test answer 1" });
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestDeleteSingle_2", Question = "Test question 2", Answrer = "Test answer 2" });
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestDeleteSingle_3", Question = "Test question 3", Answrer = "Test answer 3" });
+
+                logic.Delete(new ExcerciseBinding { Id = 2 });
+                List<ExcerciseView> list = logic.Read(null);
+
+                Assert.Equal(2, list.Count);
+                Assert.Equal(1, list[0].Id);
+                Assert.Equal(3, list[1].Id);
+            }
+            finally
+            {
+                logic.Delete(null);
+            }
+        }
+
+        [Fact]
         public void TestUpdate()
         {
-            ILogic logic = new Logic(DateTime.Now.ToString("test"));
+            ILogic logic = new Logic("test");
 
             try
             {

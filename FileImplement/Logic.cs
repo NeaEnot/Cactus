@@ -64,7 +64,7 @@ namespace FileImplement
         {
             List<Excercise> list = context.Excercises;
 
-            list.RemoveAll(rec => model == null);
+            list.RemoveAll(rec => model == null || rec.Id == model.Id);
 
             context.Excercises = list;
         }

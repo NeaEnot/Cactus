@@ -97,6 +97,7 @@
 			<param name="model">
 				<para>Модель, использующаяся как запрос.</para>
 				<para>Если model == null, то удаляются все хранимые объекты.</para>
+				<para>Иначе выборка осуществляется по полю Id.</para>
 			</param>
 		</Delete>
 	</members>
