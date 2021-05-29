@@ -1,7 +1,7 @@
 ﻿using Core.Models;
 using Xunit;
 
-namespace Tests.CoreTest
+namespace Tests
 {
 	public class ModelsTest
 	{

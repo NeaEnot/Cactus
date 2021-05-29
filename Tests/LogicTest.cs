@@ -1,11 +1,10 @@
 ﻿using Core;
 using Core.Models;
 using FileImplement;
-using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Tests.CoreTest
+namespace Tests
 {
     public class LogicTest
     {
