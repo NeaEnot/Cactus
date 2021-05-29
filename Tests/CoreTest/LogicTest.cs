@@ -68,6 +68,35 @@ namespace Tests.CoreTest
         }
 
         [Fact]
+        public void TestReadByTitle()
+        {
+            ILogic logic = new Logic("test");
+
+            try
+            {
+                logic.Create(new ExcerciseBinding { Title = "Area.Theme_1.Excercise_1", Question = "Test question 1", Answrer = "Test answer 1" });
+                logic.Create(new ExcerciseBinding { Title = "Area.Theme_1.Excercise_2", Question = "Test question 2", Answrer = "Test answer 2" });
+                logic.Create(new ExcerciseBinding { Title = "Area.Theme_2.Excercise_1", Question = "Test question 3", Answrer = "Test answer 3" });
+
+                List<ExcerciseView> list1 = logic.Read(new ExcerciseBinding { Title = "Area.Theme_1.Excercise_2" });
+                List<ExcerciseView> list2 = logic.Read(new ExcerciseBinding { Title = "Area.Theme_1" });
+                List<ExcerciseView> list3 = logic.Read(new ExcerciseBinding { Title = "Area.Theme_2" });
+
+                Assert.Single(list1);
+                Assert.Equal(2, list1[0].Id);
+                Assert.Equal(2, list2.Count);
+                Assert.Equal(1, list2[0].Id);
+                Assert.Equal(2, list2[1].Id);
+                Assert.Single(list3);
+                Assert.Equal(3, list3[0].Id);
+            }
+            finally
+            {
+                logic.Delete(null);
+            }
+        }
+
+        [Fact]
         public void TestDeleteAll()
         {
             ILogic logic = new Logic("test");

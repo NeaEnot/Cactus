@@ -36,7 +36,7 @@ namespace FileImplement
         {
             return
                 context.Excercises
-                .Where(rec => model == null || rec.Id == model.Id)
+                .Where(rec => model == null || rec.Id == model.Id || model.Title != null && rec.Title.StartsWith(model.Title))
                 .Select(rec => new ExcerciseView
                 {
                     Id = rec.Id,
