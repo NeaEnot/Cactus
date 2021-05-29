@@ -12,6 +12,6 @@ namespace FileImplement
 
 		public string Question { get; set; }
 
-		public string Answrer { get; set; }
+		public string Answer { get; set; }
 	}
 }

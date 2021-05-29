@@ -35,7 +35,7 @@ namespace Tests
                 Assert.Equal(2, list[0].Id);
                 Assert.Equal("Tests.CoreTest.LogicTest.TestReadById_2", list[0].Title);
                 Assert.Equal("Test question 2", list[0].Question);
-                Assert.Equal("Test answer 2", list[0].Answrer);
+                Assert.Equal("Test answer 2", list[0].Answer);
             }
             finally
             {
@@ -87,7 +87,7 @@ namespace Tests
                 Assert.Equal(1, list[0].Id);
                 Assert.Equal("Tests.CoreTest.LogicTest.TestCreate", list[0].Title);
                 Assert.Equal("Test question", list[0].Question);
-                Assert.Equal("Test answer", list[0].Answrer);
+                Assert.Equal("Test answer", list[0].Answer);
             }
             finally
             {
@@ -175,7 +175,7 @@ namespace Tests
                 Assert.Equal(1, list[0].Id);
                 Assert.Equal("Tests.CoreTest.LogicTest.TestUpdate_2", list[0].Title);
                 Assert.Equal("Test question 2", list[0].Question);
-                Assert.Equal("Test answer 2", list[0].Answrer);
+                Assert.Equal("Test answer 2", list[0].Answer);
             }
             finally
             {

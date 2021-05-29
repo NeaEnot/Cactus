@@ -21,11 +21,11 @@
 				Вопрос.
 			</value>
 		</Question>
-		<Answrer>
+		<Answer>
 			<value>
 				Ответ на вопрос.
 			</value>
-		</Answrer>
+		</Answer>
 	</members>
 	<members name="ExcerciseBinding">
 		<ExcerciseBinding>
@@ -48,11 +48,11 @@
 				Вопрос.
 			</value>
 		</Question>
-		<Answrer>
+		<Answer>
 			<value>
 				Ответ на вопрос.
 			</value>
-		</Answrer>
+		</Answer>
 	</members>
 	<members name="ILogic">
 		<ILogic>

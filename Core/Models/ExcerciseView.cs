@@ -12,7 +12,7 @@
 		/// <include file='Documentation.xml' path='documentation/members[@name="ExcerciseView"]/Question/*'/>
 		public string Question { get; set; }
 
-		/// <include file='Documentation.xml' path='documentation/members[@name="ExcerciseView"]/Answrer/*'/>
-		public string Answrer { get; set; }
+		/// <include file='Documentation.xml' path='documentation/members[@name="ExcerciseView"]/Answer/*'/>
+		public string Answer { get; set; }
 	}
 }

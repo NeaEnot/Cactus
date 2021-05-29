@@ -68,12 +68,24 @@ namespace Cactus
 
         private void ButtonCreate_Click(object sender, RoutedEventArgs e)
         {
-            ExcerciseView model = GetSelectedItem();
+            LoadData();
+            ExcerciseWindow window = new ExcerciseWindow(logic, null);
+            window.ShowDialog();
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            ExcerciseView model = GetSelectedItem();
+            try
+            {
+                ExcerciseView model = GetSelectedItem();
+                ExcerciseWindow window = new ExcerciseWindow(logic, model);
+                window.ShowDialog();
+                LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)

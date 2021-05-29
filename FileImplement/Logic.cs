@@ -32,7 +32,7 @@ namespace FileImplement
                     Id = list.Count > 0 ? list.Max(rec => rec.Id) + 1 : 1,
                     Title = model.Title,
                     Question = model.Question,
-                    Answrer = model.Answrer
+                    Answer = model.Answer
                 });
 
             context.Excercises = list;
@@ -48,7 +48,7 @@ namespace FileImplement
                     Id = rec.Id,
                     Title = rec.Title,
                     Question = rec.Question,
-                    Answrer = rec.Answrer
+                    Answer = rec.Answer
                 })
                 .ToList();
         }
@@ -61,7 +61,7 @@ namespace FileImplement
 
             excercise.Title = model.Title;
             excercise.Question = model.Question;
-            excercise.Answrer = model.Answrer;
+            excercise.Answer = model.Answer;
 
             context.Excercises = list;
         }
