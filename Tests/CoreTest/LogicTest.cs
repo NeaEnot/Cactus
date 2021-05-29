@@ -43,6 +43,31 @@ namespace Tests.CoreTest
         }
 
         [Fact]
+        public void TestReadById()
+        {
+            ILogic logic = new Logic(DateTime.Now.ToString("test"));
+
+            try
+            {
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestReadById_1", Question = "Test question 1", Answrer = "Test answer 1" });
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestReadById_2", Question = "Test question 2", Answrer = "Test answer 2" });
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestReadById_3", Question = "Test question 3", Answrer = "Test answer 3" });
+
+                List<ExcerciseView> list = logic.Read(new ExcerciseBinding { Id = 2 });
+
+                Assert.Single(list);
+                Assert.Equal(2, list[0].Id);
+                Assert.Equal("Tests.CoreTest.LogicTest.TestReadById_2", list[0].Title);
+                Assert.Equal("Test question 2", list[0].Question);
+                Assert.Equal("Test answer 2", list[0].Answrer);
+            }
+            finally
+            {
+                logic.Delete(null);
+            }
+        }
+
+        [Fact]
         public void TestDeleteAll()
         {
             ILogic logic = new Logic(DateTime.Now.ToString("test"));
