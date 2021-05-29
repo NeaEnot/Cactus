@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<documentation>
+	<members name="Logic">
+		<Logic>
+			<summary>
+				Реализация интерфейса ILogic, хранящая все сущности в файле.
+			</summary>
+		</Logic>
+		<Constructor>
+			<summary>
+				Создаёт экземпляр класса Logic, использующего как хранилище файл с указанным названием.
+			</summary>
+			<param name="key">
+				Название используемого в качестве хранилища файла.
+			</param>
+		</Constructor>
+	</members>
+</documentation>

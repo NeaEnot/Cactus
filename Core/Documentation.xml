@@ -16,42 +16,61 @@
 				Полное название упражнения состоящее из последовательности подтем.
 			</value>
 		</Title>
-    <Question>
-      <value>
-        Вопрос.
-      </value>
-    </Question>
-    <Answrer>
-      <value>
-        Ответ на вопрос.
-      </value>
-    </Answrer>
+		<Question>
+			<value>
+				Вопрос.
+			</value>
+		</Question>
+		<Answrer>
+			<value>
+				Ответ на вопрос.
+			</value>
+		</Answrer>
 	</members>
-  <members name="ExcerciseBinding">
-    <ExcerciseBinding>
-      <summary>
-        Модель, отвечающая за представление упражнения передаваемого в источник хранения.
-      </summary>
-    </ExcerciseBinding>
-    <Id>
-      <value>
-        Id упражнения.
-      </value>
-    </Id>
-    <Title>
-      <value>
-        Полное название упражнения состоящее из последовательности подтем.
-      </value>
-    </Title>
-    <Question>
-      <value>
-        Вопрос.
-      </value>
-    </Question>
-    <Answrer>
-      <value>
-        Ответ на вопрос.
-      </value>
-    </Answrer>
-  </members>
+	<members name="ExcerciseBinding">
+		<ExcerciseBinding>
+			<summary>
+				Модель, отвечающая за представление упражнения передаваемого в источник хранения.
+			</summary>
+		</ExcerciseBinding>
+		<Id>
+			<value>
+				Id упражнения.
+			</value>
+		</Id>
+		<Title>
+			<value>
+				Полное название упражнения состоящее из последовательности подтем.
+			</value>
+		</Title>
+		<Question>
+			<value>
+				Вопрос.
+			</value>
+		</Question>
+		<Answrer>
+			<value>
+				Ответ на вопрос.
+			</value>
+		</Answrer>
+	</members>
+	<members name="ILogic">
+		<ILogic>
+			<summary>
+				Интерфейс логики работы с источником хранения сущностей Excercise.
+			</summary>
+		</ILogic>
+		<Read>
+			<summary>
+				Возвращает список хранимых сущностей согласно запросу.
+			</summary>
+			<param name="model">
+				<para>Модель, использующаяся как запрос.</para>
+				<para>Если model == null, то возвращаются все хранимые сущности.</para>
+			</param>
+			<returns>
+				Список хранимых сущностей.
+			</returns>
+		</Read>
+	</members>
 </documentation>
