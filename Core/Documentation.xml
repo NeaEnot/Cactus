@@ -74,11 +74,29 @@
 			</summary>
 			<param name="model">
 				<para>Модель, использующаяся как запрос.</para>
-				<para>Если model == null, то возвращаются все хранимые сущности.</para>
+				<para>Если model == null, то возвращаются все хранимые объекты.</para>
 			</param>
 			<returns>
 				Список хранимых сущностей.
 			</returns>
 		</Read>
+		<Update>
+			<summary>
+				Обновляет соответствующий объект.
+			</summary>
+			<param name="model">
+				<para>Модель, использующаяся как запрос.</para>
+				<para>Выбор объекта осуществляется по полю Id.</para>
+			</param>
+		</Update>
+		<Delete>
+			<summary>
+				Удаляет соответствующий объект.
+			</summary>
+			<param name="model">
+				<para>Модель, использующаяся как запрос.</para>
+				<para>Если model == null, то удаляются все хранимые объекты.</para>
+			</param>
+		</Delete>
 	</members>
 </documentation>

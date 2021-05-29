@@ -46,6 +46,19 @@ namespace FileImplement
                 .ToList();
         }
 
+        public void Update(ExcerciseBinding model)
+        {
+            List<Excercise> list = context.Excercises;
+
+            Excercise excercise = list.FirstOrDefault(rec => rec.Id == model.Id);
+
+            excercise.Title = model.Title;
+            excercise.Question = model.Question;
+            excercise.Answrer = model.Answrer;
+
+            context.Excercises = list;
+        }
+
         public void Delete(ExcerciseBinding model)
         {
             List<Excercise> list = context.Excercises;
