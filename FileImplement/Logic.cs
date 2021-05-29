@@ -1,5 +1,6 @@
 ﻿using Core;
 using Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,6 +20,11 @@ namespace FileImplement
         public void Create(ExcerciseBinding model)
         {
             List<Excercise> list = context.Excercises;
+
+            if (list.Count(rec => rec.Title == model.Title) > 0)
+            {
+                throw new Exception("Such title was exist");
+            }
 
             list.Add(
                 new Excercise

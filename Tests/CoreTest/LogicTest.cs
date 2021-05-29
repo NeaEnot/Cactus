@@ -20,29 +20,6 @@ namespace Tests.CoreTest
         }
 
         [Fact]
-        public void TestCreate()
-        {
-            ILogic logic = new Logic("test");
-
-            try
-            {
-                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestCreate", Question = "Test question", Answrer = "Test answer" });
-
-                List<ExcerciseView> list = logic.Read(null);
-
-                Assert.Single(list);
-                Assert.Equal(1, list[0].Id);
-                Assert.Equal("Tests.CoreTest.LogicTest.TestCreate", list[0].Title);
-                Assert.Equal("Test question", list[0].Question);
-                Assert.Equal("Test answer", list[0].Answrer);
-            }
-            finally
-            {
-                logic.Delete(null);
-            }
-        }
-
-        [Fact]
         public void TestReadById()
         {
             ILogic logic = new Logic("test");
@@ -90,6 +67,48 @@ namespace Tests.CoreTest
                 Assert.Single(list3);
                 Assert.Equal(3, list3[0].Id);
             }
+            finally
+            {
+                logic.Delete(null);
+            }
+        }
+
+        [Fact]
+        public void TestCreate()
+        {
+            ILogic logic = new Logic("test");
+
+            try
+            {
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestCreate", Question = "Test question", Answrer = "Test answer" });
+
+                List<ExcerciseView> list = logic.Read(null);
+
+                Assert.Single(list);
+                Assert.Equal(1, list[0].Id);
+                Assert.Equal("Tests.CoreTest.LogicTest.TestCreate", list[0].Title);
+                Assert.Equal("Test question", list[0].Question);
+                Assert.Equal("Test answer", list[0].Answrer);
+            }
+            finally
+            {
+                logic.Delete(null);
+            }
+        }
+
+        [Fact]
+        public void TestCreateUnicTitle()
+        {
+            ILogic logic = new Logic("test");
+
+            try
+            {
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestCreateUnicTitle", Question = "Test question 1", Answrer = "Test answer 1" });
+                logic.Create(new ExcerciseBinding { Title = "Tests.CoreTest.LogicTest.TestCreateUnicTitle", Question = "Test question 2", Answrer = "Test answer 2" });
+
+                Assert.True(false);
+            }
+            catch { }
             finally
             {
                 logic.Delete(null);
