@@ -1,0 +1,19 @@
+﻿<Window x:Class="Cactus.ExcercisesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cactus"
+        mc:Ignorable="d"
+        Title="ExcercisesWindow" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer Margin="0,0,0,35">
+            <TreeView Name="treeView" Loaded="treeView_Loaded"/>
+        </ScrollViewer>
+        <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Bottom">
+            <Button Content="Создать" Margin="10 5" Click="ButtonCreate_Click"/>
+            <Button Content="Изменить" Margin="10 5" Click="ButtonUpdate_Click"/>
+            <Button Content="Удалить" Margin="10 5" Click="ButtonDelete_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
