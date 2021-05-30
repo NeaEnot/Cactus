@@ -20,7 +20,8 @@ namespace Cactus
 
         private void ButtonStartTest_Click(object sender, RoutedEventArgs e)
         {
-
+            ConfigTestWindow window = new ConfigTestWindow(logic);
+            window.ShowDialog();
         }
 
         private void ButtonExcercises_Click(object sender, RoutedEventArgs e)

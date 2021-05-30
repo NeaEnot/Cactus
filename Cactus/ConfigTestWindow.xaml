@@ -1,0 +1,22 @@
+﻿<Window x:Class="Cactus.ConfigTestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cactus"
+        mc:Ignorable="d"
+        Title="Настроить тестирование" Height="89" Width="485"
+         MinHeight="190">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="127*" MinHeight="127"/>
+            <RowDefinition Height="45*" MinHeight="45"/>
+        </Grid.RowDefinitions>
+        <Label Content="Тема (оставить пустым для проверки по всем темам)" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="303" Grid.Row="0"/>
+        <TextBox Name="textBoxTheme" Margin="10,41,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Grid.Row="0"/>
+        <Label Content="Количество вопросов (оставить пустым для тестирования по всем вопросам темы)" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="26" Width="474" Grid.Row="0"/>
+        <TextBox Name="textBoxCount"  Margin="10,95,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Grid.Row="0"/>
+        <Button Content="Старт" HorizontalAlignment="Center" Margin="0,7,0,0" Width="63" Height="20" VerticalAlignment="Top" Grid.Row="1" Click="Button_Click"/>
+
+    </Grid>
+</Window>

@@ -46,6 +46,8 @@ namespace Cactus
                 answer = excercise.Answer;
 
                 textBlockAnswer.Background = Brushes.LightGray;
+                textBlockAnswer.Text = "";
+
                 buttonCheck.IsEnabled = true;
                 buttonSuccess.IsEnabled = false;
                 buttonFail.IsEnabled = false;
