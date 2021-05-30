@@ -68,9 +68,9 @@ namespace Cactus
 
         private void ButtonCreate_Click(object sender, RoutedEventArgs e)
         {
-            LoadData();
             ExcerciseWindow window = new ExcerciseWindow(logic, null);
             window.ShowDialog();
+            LoadData();
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)

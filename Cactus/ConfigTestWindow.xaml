@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Cactus"
         mc:Ignorable="d"
         Title="Настроить тестирование" Height="89" Width="485"
-         MinHeight="190">
+         MinHeight="200">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="127*" MinHeight="127"/>
